@@ -10,7 +10,7 @@
 
 function commntinatorCheckComment($commentdata)
 {
-    if (0 === preg_match('/[а-яА-Я]/', $commentdata['comment_content'])) {
+    if (0 === preg_match('/[а-яА-Я]/imsu', $commentdata['comment_content'])) {
         wp_die('Коментарът трябва да съдържа поне един символ на кирилица');
     }
     return $commentdata;
